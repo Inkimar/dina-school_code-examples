@@ -1,0 +1,95 @@
+Following the steps in this series:  
+https://www.youtube.com/playlist?list=PL5ze0DjYv5DYBDfl0vF_VRxEu8JdTIHlR
+
+Docs: http://docs.sequelizejs.com/ 
+
+Creates the table 'article' in the database using "sequelize".
+
+pre-req:
+create the database in mysql
+
+1) npm install (install the dependencies found in package.json)
+2) node testing-1.js
+
+
+The schema should look like this: - added 'id' and 'createdAt'+'updatedAt'
+mysql> desc articles;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| title     | varchar(255) | YES  |     | NULL    |                |
+| content   | varchar(255) | YES  |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
+| updatedAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
+
+commands:
+> npm init -y
+-- createas a simple package.json-file
+> npm install --save sequelize
+-- adds sequelizer to your package.json + adds to node_modules
+
+more about installing:
+http://docs.sequelizejs.com/manual/installation/getting-started.html
+
+// Using NPM
+$ npm install --save sequelize
+
+# And one of the following:
+$ npm install --save pg pg-hstore
+$ npm install --save mysql2
+$ npm install --save sqlite3
+$ npm install --save tedious // MSSQL
+
+Did the both of them
+>  npm install --save mysql
+>  npm install --save mysql2
+
+
+Content of the package.json-file
+{
+  "name": "mysql-sequelize-2",
+  "version": "1.0.0",
+  "description": "https://youtu.be/qsDvJrGMSUY",
+  "main": "testing-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.39.0",
+  }
+}
+
+Running testing-2.
+Adds data to the 'articles'-table
+mysql> select * from articles;
++----+---------------+-------------+---------------------+---------------------+
+| id | title         | body        | createdAt           | updatedAt           |
++----+---------------+-------------+---------------------+---------------------+
+|  1 | my demo title | lorem ipsum | 2018-10-03 12:39:06 | 2018-10-03 12:39:06 |
++----+---------------+-------------+---------------------+---------------------+
+1 row in set (0.00 sec)
+
+
+
+
+
+for testing-1.
+-> see datatypes: http://docs.sequelizejs.com/variable/index.html#static-variable-DataTypes 
+
+
+Got this error, the program runs anyway
+"sequelize deprecated String based operators are now deprecated. Please use Symbol based operators for better security, read more at http://docs.sequelizejs.com/manual/tutorial/querying.html#operators node_modules/sequelize/lib/sequelize.js:242:13 "
+
+
+notes:
+aync javascript with promises (Kyle Robinson Young): youtu.be/g90irqWEqd8
