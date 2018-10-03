@@ -7,3 +7,17 @@ create the database in mysql
 2) node testing-1.js
 
 
+The schema should look like this: - added 'id' and 'createdAt'+'updatedAt'
+mysql> desc articles;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| title     | varchar(255) | YES  |     | NULL    |                |
+| content   | varchar(255) | YES  |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
+| updatedAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
