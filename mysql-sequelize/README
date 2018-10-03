@@ -1,0 +1,9 @@
+Creates the table 'article' in the database using "sequelize".
+
+pre-req:
+create the database in mysql
+
+1) npm install (install the dependencies found in package.json)
+2) node testing-1.js
+
+
