@@ -1,5 +1,5 @@
 node_modules
 *~
-mysql-sequelize/package-lock.json
+**/**/package-lock.json
 
 
