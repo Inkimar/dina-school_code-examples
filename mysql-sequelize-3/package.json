@@ -1,0 +1,14 @@
+{
+  "name": "mysql-sequelize-3",
+  "version": "1.0.0",
+  "description": "https://youtu.be/qsDvJrGMSUY",
+  "main": "testing-1.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.39.0"
+  }
+}
